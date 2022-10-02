@@ -1,8 +1,9 @@
-import { Box, Text, Heading, Grid, GridItem, Icon } from "@chakra-ui/react"
+import { Box, Text, Heading, Tag } from "@chakra-ui/react"
 import Layout from "../components/layout.js"
-import CircleIcon from "@mui/icons-material/Circle"
 
 const skillntools = [
+	"HTML",
+	"CSS",
 	"JavaScript",
 	"React",
 	"Neovim",
@@ -36,27 +37,27 @@ const About = () => {
 					about
 				</Heading>
 			</Box>
-			<Box color="#bfbecb">
+			<Box color="#bfbecb" fontSize="sm" mb="4">
 				<Text>
-					Hello! my name is Manuel, a web developer. When I&apos;m not
-					connected, I love to listen to music and practice calisthenics
+					Hello! my name is Manuel, a front-end developer located in Peru. When
+					I&apos;m not connected, I love to listen to music and practice
+					calisthenics.
 				</Text>
 				<Box mt="4" color="#bfbecb">
 					<Text>Technologies that I have applied in my projects:</Text>
 				</Box>
 			</Box>
-			<Grid mt="5" gap="3" templateColumns="repeat(2, minmax(140px, 200px))">
+			<Box display="flex" flexWrap="wrap">
 				{skillntools.map((item) => {
 					return (
-						<GridItem key={item} display="flex" alignItems="center">
-							<Icon as={CircleIcon} fontSize="8px" mr="15px" color="#72e2ae" />
-							<Text fontSize="xs" fontFamily="Fira Code" color="#bfbecb">
+						<Tag key={item} mr="2" mb="2" size="lg">
+							<Text fontSize="xs" color="#bfbecb">
 								{item}
 							</Text>
-						</GridItem>
+						</Tag>
 					)
 				})}
-			</Grid>
+			</Box>
 		</Layout>
 	)
 }

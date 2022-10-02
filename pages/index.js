@@ -9,7 +9,7 @@ const Home = () => {
 		<Layout>
 			<Box
 				minH="calc(100vh - 75px)"
-				maxW="760px"
+				maxW="100%"
 				display="flex"
 				alignItems="center"
 			>
