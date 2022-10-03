@@ -14,7 +14,12 @@ const Home = () => {
 				alignItems="center"
 			>
 				<Box>
-					<Heading textAlign="center" fontWeight="600" fontSize="4xl">
+					<Heading
+						textAlign="center"
+						fontWeight="600"
+						fontSize="4xl"
+						color="#fff"
+					>
 						Howdy,
 					</Heading>
 					<Heading
@@ -25,74 +30,49 @@ const Home = () => {
 					>
 						I&apos;m Manuel Benites
 					</Heading>
-					<Box textAlign="center" mt="20px">
-						I am a frontend web developer. I can provide clean code and pixel
-						perfect design. I also make website more & more interactive with web
-						animations.
+					<Box textAlign="center" mt="20px" color="#bfbecb">
+						I am a Frontend Web Developer building the Frontend of Websites and
+						Web Applications.
 					</Box>
 					<Box display="flex" justifyContent="center" color="#bfbecb" mt="20px">
 						<ButtonGroup variant="outline">
 							<Link href="#" isExternal>
 								<Box
-									display="flex"
-									justifyContent="center"
-									alignItems="center"
-									borderRadius="sm"
-									border="1px"
-									borderColor="#3F444E"
-									w="40px"
-									h="40px"
+									mx="2"
 									color="#bfbecb"
-									transition="0.2s"
+									transition=".2s"
 									_hover={{
-										borderColor: "#72e2ae",
-										bg: "#72e2ae",
-										color: "#0E121B",
+										color: "#72e2ae",
+										transform: "scale(1.1)",
 									}}
 								>
-									<Icon as={InstagramIcon} fontSize="lg" />
+									<Icon as={InstagramIcon} fontSize="xl" />
 								</Box>
 							</Link>
 							<Link href="#" isExternal>
 								<Box
-									display="flex"
-									justifyContent="center"
-									alignItems="center"
-									borderRadius="sm"
-									border="1px"
-									borderColor="#3F444E"
-									w="40px"
-									h="40px"
+									mx="2"
 									color="#bfbecb"
-									transition="0.2s"
+									transition=".2s"
 									_hover={{
-										borderColor: "#72e2ae",
-										bg: "#72e2ae",
-										color: "#0E121B",
+										color: "#72e2ae",
+										transform: "scale(1.1)",
 									}}
 								>
-									<Icon as={LinkedInIcon} fontSize="lg" />
+									<Icon as={LinkedInIcon} fontSize="xl" />
 								</Box>
 							</Link>
 							<Link href="#" isExternal>
 								<Box
-									display="flex"
-									justifyContent="center"
-									alignItems="center"
-									borderRadius="sm"
-									border="1px"
-									borderColor="#3F444E"
-									w="40px"
-									h="40px"
+									mx="2"
 									color="#bfbecb"
-									transition="0.2s"
+									transition=".2s"
 									_hover={{
-										borderColor: "#72e2ae",
-										bg: "#72e2ae",
-										color: "#0E121B",
+										color: "#72e2ae",
+										transform: "scale(1.1)",
 									}}
 								>
-									<Icon as={GitHubIcon} fontSize="lg" />
+									<Icon as={GitHubIcon} fontSize="xl" />
 								</Box>
 							</Link>
 						</ButtonGroup>

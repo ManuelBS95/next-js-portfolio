@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
 				pt="75px"
 				px={["20px", "20px", "40px", "60px"]}
 				minH="100vh"
-				maxW="900px"
+				maxW="1030px"
 			>
 				{children}
 			</Box>

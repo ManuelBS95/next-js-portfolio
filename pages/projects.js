@@ -15,27 +15,27 @@ import GitHubIcon from "@mui/icons-material/GitHub"
 
 const dataProjects = [
 	{
-		id: "mb1",
-		title: "Notes App",
-		description:
-			"Web application to create and save notes built with react, nodejs and mongodb. ",
-		tech: ["NodeJS", "Express", "React", "Tailwindcss", "Neovim"],
-		image: "/images/image1.jpg",
-		github: "https://github.com/ManuelBS95/notesapp-mongodb-react-node",
-		page: "",
-	},
-	{
-		id: "mb2",
+		id: "mb3",
 		title: "Music Player App",
 		description:
 			"A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.",
 		tech: ["React", "Tailwindcss"],
-		image: "/images/image2.jpg",
+		image: "/images/image1.jpg",
 		github: "",
 		page: "",
 	},
 	{
-		id: "mb3",
+		id: "mb2",
+		title: "Notes App",
+		description:
+			"Web application to create and save notes built with react, nodejs and mongodb. ",
+		tech: ["NodeJS", "Express", "React", "Tailwindcss", "Neovim"],
+		image: "/images/project2.jpg",
+		github: "https://github.com/ManuelBS95/notesapp-mongodb-react-node",
+		page: "",
+	},
+	{
+		id: "mb1",
 		title: "Trivia Game",
 		description:
 			"A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.",
@@ -67,11 +67,12 @@ const Projects = () => {
 					fontSize="8xl"
 					opacity=".1"
 					textTransform="uppercase"
+					color="#fafafa"
 				>
 					Projects
 				</Heading>
 			</Box>
-			<Box w="100%">
+			<Box display={["block", "block", "none"]}>
 				{dataProjects.map((item) => {
 					return (
 						<Box
@@ -82,13 +83,14 @@ const Projects = () => {
 							boxShadow="lg"
 							borderWidth="1px"
 							borderColor="#181D29"
-							mb="10"
+							mb="20"
 						>
 							<Image
 								src={item.image}
 								objectFit="cover"
 								position="absolute"
 								minH="100%"
+								width="100%"
 								minW="100%"
 							/>
 							<Box
@@ -100,11 +102,18 @@ const Projects = () => {
 								opacity=".8"
 							></Box>
 							<Box position="relative" display="block" p="8" zIndex="1">
-								<Text fontFamily="Fira Code" fontSize="xs" my="2">
+								<Text
+									fontFamily="Fira Code"
+									fontSize="xs"
+									my="2"
+									color="#bfbecb"
+								>
 									Featured Project
 								</Text>
-								<Heading mb="2">{item.title}</Heading>
-								<Box py="5" position="relative">
+								<Heading mb="2" color="#fafafa">
+									{item.title}
+								</Heading>
+								<Box py="5" position="relative" color="#bfbecb">
 									<Text fontSize="sm">{item.description}</Text>
 								</Box>
 								<List
@@ -115,7 +124,7 @@ const Projects = () => {
 								>
 									{item.tech.map((skill) => {
 										return (
-											<ListItem key={skill} mb="1" mr="3">
+											<ListItem key={skill} mb="1" mr="3" color="#bfbecb">
 												{skill}
 											</ListItem>
 										)
@@ -123,12 +132,43 @@ const Projects = () => {
 								</List>
 								<Box display="flex" alignItems="center" gap="4" mt="4">
 									<Link href={item.github} isExternal _focus={{ border: "0" }}>
-										<Icon fontSize="xl" as={GitHubIcon} />
+										<Icon
+											fontSize="xl"
+											as={GitHubIcon}
+											color="#bfbecb"
+											transition=".2s"
+											_hover={{ color: "#72e2ae", transform: "scale(1.1)" }}
+										/>
 									</Link>
 									<Link href={item.page} isExternal _focus={{ border: "0" }}>
-										<Icon fontSize="xl" as={LaunchIcon} />
+										<Icon
+											fontSize="xl"
+											as={LaunchIcon}
+											color="#bfbecb"
+											transition=".2s"
+											_hover={{ color: "#72e2ae", transform: "scale(1.1)" }}
+										/>
 									</Link>
 								</Box>
+							</Box>
+						</Box>
+					)
+				})}
+			</Box>
+			<Box display={["none", "none", "block"]}>
+				{dataProjects.map((item) => {
+					return (
+						<Box
+							position="relative"
+							display="grid"
+							gridTemplateColumns="1fr 1fr"
+							gridGap="8"
+							mb="20"
+							key={item.id}
+						>
+							<Image src={item.image} />
+							<Box color="#fff" fontSize="sm">
+								{item.description}
 							</Box>
 						</Box>
 					)

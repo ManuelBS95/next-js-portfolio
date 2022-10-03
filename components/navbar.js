@@ -27,7 +27,8 @@ const Navbar = () => {
 			position="fixed"
 			w="100%"
 			px={["20px", "20px", "40px", "60px"]}
-			zIndex="1"
+			zIndex="100"
+			bg="#0E121B"
 		>
 			<Box
 				h="100%"
@@ -94,9 +95,9 @@ const Navbar = () => {
 							cursor="pointer"
 							position="absolute"
 							right={["20px", "20px", "40px", "60px"]}
-							top="24px"
+							top="27px"
 						>
-							<Icon as={CloseOutlinedIcon} />
+							<Icon as={CloseOutlinedIcon} color="#72e2ae" />
 						</Box>
 						<Box
 							w="100%"
